@@ -1,7 +1,7 @@
 {
-	"name": "jsdoc-boilerplate",
+	"name": "wanted-pre-onboarding0challenge0fe-2",
 	"version": "1.0.0",
-	"description": "",
+	"description": "온보드 첼린지 2회차 사전과재",
 	"main": "index.js",
 	"scripts": {
 		"docs": "jsdoc -c jsdoc.json"
