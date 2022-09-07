@@ -17,7 +17,14 @@ function Todo(id, content, isCompleted, category, tags) {}
  * @param {string} category
  * @param {string[]} [tags]
  */
-function createTodo() {}
+function createTodo(todoItem) {
+  const todo = {...todoItem}
+  if(typeof todo.content == 'undefined') {
+    throw 'content required'
+  }
+  return todo;
+}
+
 
 /**
  * read Todo
@@ -26,7 +33,9 @@ function createTodo() {}
  * @param {string} id - Required
  * @returns {Todo}
  */
-function readTodo(id) {}
+async function readTodo(id) {
+  
+}
 
 /**
  * update Todo
@@ -38,7 +47,9 @@ function readTodo(id) {}
  * @param {string} category 
  * @param {string[]} [tags] 
  */
-function updateTodo() {}
+async function updateTodo(todoItem) {
+
+}
 
 /**
  * delete Todo
@@ -46,41 +57,6 @@ function updateTodo() {}
  * @param {string} [id] - without id : every Todo will be deleted
  * @param {string[]} [tags] - without tags : tags won't be deleted
  */
-function deleteTodo() {}
+async function deleteTodo({ id,tags }) {
 
-// // Use the inline {@link} tag to include a link within a free-form description.
-// /**
-//  * @see {@link foo} for further information.
-//  * @see {@link http://github.com|GitHub}
-//  */
-// function bar() {}
-
-// /**
-//  * Generic dairy product.
-//  * @constructor
-//  */
-// function DairyProduct() {}
-
-// /**
-//  * Check whether the dairy product is solid at room temperature.
-//  * @abstract
-//  * @return {boolean}
-//  */
-// DairyProduct.prototype.isSolid = function () {
-// 	throw new Error('must be implemented by subclass!');
-// };
-
-// /**
-//  * Cool, refreshing milk.
-//  * @constructor
-//  * @augments DairyProduct
-//  */
-// function Milk() {}
-
-// /**
-//  * Check whether milk is solid at room temperature.
-//  * @return {boolean} Always returns false.
-//  */
-// Milk.prototype.isSolid = function () {
-// 	return false;
-// };
+}
